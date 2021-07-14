@@ -1,0 +1,122 @@
+@import "../../../styles/colors.scss";
+
+.section {
+  img {
+    margin: 0;
+  }
+  h2 {
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    list-style: none;
+    margin: 0;
+    li {
+      display: flex;
+      flex-direction: column;
+      h4 {
+        color: $base-yellow;
+        margin-bottom: 7px;
+        text-transform: capitalize;
+      }
+      span {
+        color: $base-darkblue;
+        font-size: 30px;
+        font-weight: 600;
+      }
+    }
+  }
+  .selectedMovesWrap {
+    .selectedMoves {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      .selectedMovesItem {
+        padding: 20px;
+        border: 2px solid #000;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        transition-duration: 600ms;
+        &:hover {
+          transition-duration: 600ms;
+          background-color: $base-lightblue;
+        }
+        h4 {
+          color: #fdcc07;
+          margin-bottom: 7px;
+          text-transform: capitalize;
+        }
+        p {
+          margin: 0;
+          color: #3a5d9f;
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .movesMenu {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    .movesMenuHeader {
+      display: flex;
+      margin-bottom: 20px;
+      .learnMethods {
+        cursor: pointer;
+        margin-right: 10px;
+        .underline {
+          width: 100%;
+          height: 3px;
+          &.__active {
+            background-color: $base-yellow;
+          }
+        }
+        h4 {
+          color: $base-yellow;
+          margin-bottom: 7px;
+          text-transform: capitalize;
+          text-decoration-color: $base-yellow;
+        }
+        &._active {
+          text-decoration: underline;
+          h4 {
+            color: $base-yellow;
+            margin-bottom: 7px;
+            text-transform: capitalize;
+            text-decoration-color: $base-yellow;
+          }
+        }
+      }
+    }
+
+    .moveBullets {
+      display: flex;
+      flex-flow: wrap;
+      margin-top: 10px;
+      .bullet {
+        cursor: pointer;
+        padding: 8px 14px;
+        background-color: $base-blue;
+        border-radius: 20px;
+        margin: 0 8px 8px 0;
+        color: #fff;
+        font-weight: 600;
+        word-break: keep-all;
+        font-size: 12px;
+        border: 2px solid #000;
+      }
+    }
+  }
+}
