@@ -2,6 +2,7 @@
   "name": "Pokemon",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://ashleyvlaer.github.io/build/",
   "dependencies": {
     "feather-icons-react": "^0.4.3",
     "graphql-hooks": "^5.1.1",
